@@ -21,11 +21,11 @@ let dropFullStack = function(){
 }
 let remake = function(event){
     event.target.style.backgroundColor = 'white';
-    event.target.style.color = 'rgba(88, 108, 237, 93)';
+    event.target.style.color = 'black';
     event.target.style.fontSize = '28px';
 }
 let unRemake = function(event){
-    event.target.style.backgroundColor = 'rgba(88, 108, 237, 93)';
+    event.target.style.backgroundColor = 'black';
     event.target.style.color = 'white';
     event.target.style.fontSize = '22px';
 }
