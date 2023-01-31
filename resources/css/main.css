@@ -1,0 +1,198 @@
+@font-face{
+    font-family:'GlegooBanner';
+    src: url('../fonts/Glegoo-Regular.woff2') format('woff2'),
+         url('../fonts/Glegoo-Regular.woff') format('woff'),
+         url('../fonts/Glegoo-Regular.ttf') format('truetype');
+  }
+h3,li,ul{
+    padding: 0%;
+    margin: 0%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+html {
+   font-size: 22px;
+   color: white;
+   background-color: black;
+}
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    display: grid;
+    grid-template: 60px / 80px 2fr 1fr;
+    background-color: rgba(88, 108, 237, 93);
+}
+.logo{
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 90%;
+}
+#logo-img{
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    padding: 5%;
+}
+nav{
+    grid-area: 1 / 3 / span 1 / span 1;
+    display: grid;
+}
+#nav-list{
+    display: grid;
+    grid-template: 100% / repeat(4,1fr);
+    list-style-type: none;
+    text-align: center;
+}
+.about-me{
+    background-color: rgba(67, 82, 159, 62);
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template: 125px 400px 125px/ repeat(9,1fr);
+    justify-content: center;
+    align-items: center ;
+}
+#name{
+    grid-area: 1 / 4 / 2 / span 3;
+    text-align: center;
+}
+.about-me-text{
+    grid-area: 2 / 3 / span 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+#far1{
+    grid-area: 2 / 6 / span 1 / span 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+.experience{
+    background-color: rgba(120, 170, 70, 88);
+    display: grid;
+    height: 650px;
+    width: 100%;
+    grid-template: 125px 400px 125px/ repeat(9,1fr);
+    justify-content: center;
+    align-items: center ;
+}
+.experience-list{
+    grid-area: 2 / 3 / span 1 / span 5;
+    text-align: justify;
+}
+.skills-logo,.contact-logo{
+    width: 50px;
+    height: 50px;
+}
+.projects-skills{
+    background-color:rgba(224, 142, 112, 88);
+    display: grid;
+    height: 650px;
+    width: 100%;
+    grid-template: 125px 400px 125px/ repeat(9,1fr);
+    justify-content: center;
+}
+.projects{
+    grid-area: 2 / 3 / span 1 / span 2;
+    text-align: justify;
+}
+.skills{
+    grid-area: 2 / 6 / span 1 / span 3;    
+}
+.skills-logos{
+    display: grid;
+    grid-template: repeat(4,1fr)/repeat(8,1fr);  
+}
+.contact{
+    text-align: center;
+}
+.drop-image{
+    height: 30px;
+    width: 30px;
+    transform: rotate(180deg);
+}
+.drop-title{
+    display: flex;
+    direction: column;
+    align-items: center;
+}
+@media only screen and (max-width: 1300px) {
+    html {
+      font-size: 20px;
+    }
+    #far1{
+        grid-area: 2 / 6 / span 1 / span 3;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    html {
+      font-size: 18px;
+    }
+    .skills-logos{
+        display: grid;
+        grid-template: repeat(4,1fr)/repeat(4,1fr);  
+    }
+    nav{
+        display: none;
+    }
+}
+@media only screen and (max-width: 750px) {
+    html {
+      font-size: 16px;
+    }
+    .skills-logos{
+        display: grid;
+        grid-template: repeat(4,1fr)/repeat(2,1fr);  
+    }
+    #far1{
+        grid-area: 2 / 6 / span 1 / span 4;
+        width: 80%;
+        height: 80%;
+    }
+    .about-me-text{
+        grid-area: 1 / 2 / span 2 / span 3;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .experience-list {
+        grid-area: 1 / 2 / span 3 / span 7;
+        text-align: justify;
+    }
+    .about-me-text{
+        grid-area: 1 / 2 / span 3 / span 4;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+    #far1{
+        grid-area: 2 / 7 / span 1 / span 4;
+        width: 80%;
+        height: 50%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .experience-list {
+        grid-area: 1 / 2 / span 3 / span 7;
+        text-align: justify;
+    }
+    .about-me-text{
+        grid-area: 3 / 2 / span 3 / span 7;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+    #far1{
+        grid-area: 2 / 2 / span 1 / span 7;
+        width: 100%;
+        height: 100%;
+    }
+}
